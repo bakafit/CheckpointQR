@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema terang dengan kontras tinggi: lebih mudah dibaca di bawah sinar matahari -->
+    <style name="Tema" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/tinta</item>
+        <item name="colorPrimaryDark">@color/tinta</item>
+        <item name="colorAccent">@color/aksen</item>
+        <item name="android:windowBackground">@color/latar</item>
+    </style>
+
+    <style name="Tombol" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:layout_marginEnd">3dp</item>
+    </style>
+
+    <style name="Label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/redup</item>
+    </style>
+</resources>

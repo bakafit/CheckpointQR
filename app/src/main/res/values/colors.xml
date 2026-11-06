@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tinta">#1D1F1C</color>
+    <color name="latar">#F4F2EE</color>
+    <color name="garis">#E2DFD8</color>
+    <color name="redup">#6B6F68</color>
+    <color name="aksen">#D9480F</color>
+    <color name="ok">#2F7D32</color>
+    <color name="peringatan">#B26A00</color>
+    <color name="buruk">#B3261E</color>
+</resources>

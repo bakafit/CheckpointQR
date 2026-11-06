@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:background="@color/latar">
+
+    <!-- Bar atas: nama checkpoint (ketuk untuk ganti) + jam -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/tinta"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/klikCheckpoint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackground">
+            <TextView
+                android:id="@+id/tvCheckpoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PILIH CHECKPOINT"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvPetugas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BBBBBB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvJam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--:--:--"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Status sinkronisasi -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:background="@color/redup"
+        android:text="Belum terhubung ke laptop" />
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/kamera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Hasil pindaian terakhir: dibuat besar supaya terbaca sekilas -->
+    <LinearLayout
+        android:id="@+id/panelHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/garis"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp">
+        <TextView
+            android:id="@+id/tvHasilBib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:textColor="@color/tinta"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/tvHasilNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/tinta"
+            android:gravity="center"
+            android:text="Arahkan kamera ke QR di BIB" />
+        <TextView
+            android:id="@+id/tvHasilKet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/tinta"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvJumlah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="6dp"
+        android:textSize="13sp"
+        android:textColor="@color/redup" />
+
+    <TextView
+        android:id="@+id/tvTerakhir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:lineSpacingExtra="2dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/tinta"
+        android:maxLines="4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp">
+        <Button android:id="@+id/btnKetik" style="@style/Tombol" android:text="Ketik BIB" />
+        <Button android:id="@+id/btnSenter" style="@style/Tombol" android:text="Senter" />
+        <Button android:id="@+id/btnDaftar" style="@style/Tombol" android:text="Daftar" />
+        <Button android:id="@+id/btnSetelan" style="@style/Tombol" android:text="Setelan" />
+    </LinearLayout>
+</LinearLayout>

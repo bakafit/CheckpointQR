@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'id.manglayang.checkpointqr'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'id.manglayang.checkpointqr'
+        minSdk 24          // Android 7.0 ke atas
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // Pemindai QR berbasis ZXing: berjalan sepenuhnya di HP, tidak butuh internet / Google Play Services
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+}
